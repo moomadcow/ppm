@@ -1,0 +1,154 @@
+/* leadership panel styles */
+.content-container.leadership {
+	background-image: url(images/bg-houses.jpg);
+	margin-top: 40px;
+	height: 440px;
+	@include phone-landscape {
+		margin-top: 0;
+		height: 280px;
+	}
+	@include phone-portrait {
+		margin-top: 0;
+		height: 380px;
+	}
+	.content-container {
+		.container {
+			padding: 0;
+		}
+	}
+	.content-block {
+		width: 300px;
+		height: 100%;
+		display: block;
+		background: rgba(0,0,0,0.5);
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 46px 30px 10px 30px;
+		color: $brand-white;
+		@include tablet-portrait {
+			width: 200px;
+			padding: 46px 20px 10px 20px;
+		}
+		@include phone-landscape {
+			width: 180px;
+			padding: 30px 14px 10px 14px;
+		}
+		@include phone-portrait {
+			width: 100%;
+			height: 340px;
+			top: auto;
+			bottom: 0;
+			left: 0;
+			padding: 10px;
+		}
+		h2 {
+			color: $brand-white;
+			line-height: 1.2;
+			@include phone-all {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			@include phone-portrait {
+				text-align: center;
+				margin-bottom: 16px;
+				margin-top: 8px;
+			}
+		}
+		p, blockquote {
+			color: $brand-white;
+			@include phone-all {
+				font-size: 14px;
+			}
+		}
+		ul {
+			list-style: none;
+			color: $brand-white;
+			font-weight: 500;
+			font-size: 17px;
+			margin-bottom: 20px;
+			@include phone-landscape {
+				font-size: 13px;
+				margin-bottom: 10px;
+			}
+			@include phone-portrait {
+				float: left;
+				width: 50%;
+				font-size: 14px;
+				margin-bottom: 14px;
+			}
+			li {
+				margin-bottom: 4px;
+				@include phone-all {
+					margin-bottom: 2px;
+				}
+				@include phone-portrait {
+					text-align: center;
+				}
+			}
+			.position {
+				font-size: 13px;
+				@include phone-all {
+					font-size: 10px;
+				}
+			}
+		}
+		.quote-author {
+			text-align: right;
+			@include tablet-portrait {
+				font-size: 14px;
+			}
+			@include phone-portrait {
+				font-size: 12px;
+			}
+		}
+	}
+	.video-block {
+		width: 100%;
+		padding: 50px 320px 0 20px;
+		@include tablet-portrait {
+			padding-right: 200px;
+		}
+		@include phone-landscape {
+			padding-right: 200px;
+			padding-top: 40px;
+		}
+		@include phone-portrait {
+			padding: 44px 10px 0 10px;
+			padding-top: 30px;
+		}
+		.video-container {
+			width: 600px;
+			height: 338px;
+			iframe {
+				width: 600px;
+				height: 338px;
+			}
+			@include tablet-portrait {
+				width: 520px;
+				height: 293px;
+				iframe {
+					width: 520px;
+					height: 293px;
+				}
+			}
+			@include phone-landscape {
+				width: 360px;
+				height: 203px;
+				iframe {
+					width: 360px;
+					height: 203px;
+				}
+			}
+			@include phone-portrait {
+				width: 300px;
+				height: 169px;
+				margin: 0 auto;
+				iframe {
+					width: 300px;
+					height: 169px;
+				}
+			}
+		}
+	}
+}

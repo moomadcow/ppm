@@ -1,0 +1,160 @@
+- get_header();
+
+- if (have_posts()) :
+- while (have_posts()) : the_post();
+
+article.single-post-content
+	:php
+		if (has_post_thumbnail( $post->ID)) :
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'single-post-image', true);
+			$thumb_url = $thumb_url_array[0];
+	.content-container.heading
+		.container
+			h1(title!="<?php the_title(); ?>")
+				- the_title();
+			- if ( get_post_meta($post->ID, 'subtitle', true) ) {
+			h2
+				- echo get_post_meta($post->ID, "subtitle", $single = true);
+			- }
+			.desc
+				| By 
+				:php
+					if ( get_post_meta($post->ID, 'by_line', true) ) {
+						echo get_post_meta($post->ID, "by_line", $single = true);
+					} else {
+						the_author_link();
+					}
+				|  | 
+				- the_time('F');
+				| &nbsp;
+				- the_time('j');
+				| , 
+				- the_time('Y');
+
+				- if ( get_post_meta($post->ID, 'article_source', true) ) {
+				|  | 
+				- echo get_post_meta($post->ID, "article_source", $single = true);
+				- }
+
+	.featured-image
+		-  the_post_thumbnail( 'single-post-image' );
+
+	- else :
+	.content-container.simple-heading
+		.container
+			h1(title!="<?php the_title(); ?>")
+				- the_title();
+			- if ( get_post_meta($post->ID, 'subtitle', true) ) {
+			h2
+				- echo get_post_meta($post->ID, "subtitle", $single = true);
+			- }
+			.desc
+				| By 
+				:php
+					if ( get_post_meta($post->ID, 'by_line', true) ) {
+						echo get_post_meta($post->ID, "by_line", $single = true);
+					} else {
+						the_author_link();
+					}
+				|  | 
+				- the_time('F');
+				| &nbsp;
+				- the_time('j');
+				| , 
+				- the_time('Y');
+
+				- if ( get_post_meta($post->ID, 'article_source', true) ) {
+				|  | 
+				- echo get_post_meta($post->ID, "article_source", $single = true);
+				- }
+
+	- endif;
+
+	.content-container
+		.container.clearfix
+			// sidebar
+			.side-bar
+				.social-share
+					.heading Share
+					span.st_facebook_custom.icon.facebook(displayText='Facebook')
+						i.fa.fa-facebook
+					span.st_twitter_custom.icon.twitter(displayText='Tweet')
+						i.fa.fa-twitter
+					span.st_linkedin_custom.icon.linkedin(displayText='LinkedIn')
+						i.fa.fa-linkedin
+					span.st_reddit_custom.icon.reddit(displayText='Reddit')
+						i.fa.fa-reddit
+
+				- get_template_part('promo-kh-module-side');
+
+			// main content
+			.article-body
+				- the_content();
+
+				- if ( get_post_meta($post->ID, 'external_link', true) ) {
+				nav.link-external
+					span.link-icon
+					| Read more: 
+					a(href="<?php echo get_post_meta($post->ID, 'external_link', $single = true); ?>" target="_blank")
+						- echo get_post_meta($post->ID, "external_link_name", $single = true);
+				- }
+
+.content-container.article-footer
+	.container
+		.content-block
+			nav.related-articles
+				.heading Done with this article? Read more
+				:php
+					$category = get_the_category($post->ID);
+					query_posts ( array(
+						'posts_per_page' => 5,
+						'post__not_in' => array($post->ID),
+						'category__in' => array(
+								$category[0]->cat_ID,
+								$category[1]->cat_ID,
+								$category[2]->cat_ID
+							)
+						));
+					if ( have_posts() ) while ( have_posts() ) : the_post();
+						get_template_part( 'article-list-related' );
+					endwhile;
+
+					wp_reset_query();
+
+			// bottom promo modules
+			- get_template_part('promo-kh-module-bottom');
+
+			.subscribe#linked_in_subscribe_box
+				- if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 8 ); }
+
+
+// modal for kevin hart
+.modal.small.promo-modal-kh#kh_modal
+	a.close.ga-events(data-action="close" data-category="promo kevin hart modal" data-label="close modal")
+		i.fa.fa-close
+	.container
+		.content
+			- get_template_part('promo-kh-module-modal');
+
+
+// modal for linkedin email signup
+.modal.small.email-sign-up#linkedin_modal
+	a.close.ga-events(data-action="close" data-category="promo linkedin modal" data-label="close modal")
+		i.fa.fa-close
+	.container
+		.content
+			- if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 10 ); }
+
+- endwhile;
+- else :
+
+h1 Not found
+p Content missing
+
+- endif;
+
+- get_footer();
+
+
+

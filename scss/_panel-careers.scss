@@ -1,0 +1,27 @@
+/* css for careers */
+
+.content-container.careers {
+	background: #fffefb;
+	@include phone-all {
+		overflow: auto;
+		height: 600px;
+		-webkit-overflow-scrolling: touch;
+		.container {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	/* Greenhouse iframe */
+	#grnhse_iframe {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		html {
+			-webkit-text-size-adjust: 100%;
+		}
+		@include phone-all {
+			width: 100%;
+		}
+	}
+}

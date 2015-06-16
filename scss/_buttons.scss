@@ -1,0 +1,27 @@
+/* button styles */
+
+a.button, .button {
+	display: inline-block;
+	text-align: center;
+	height: 44px;
+	min-width: 220px;
+	padding: 12px 25px 0 25px;
+	background: $color-button;
+	color: $brand-white;
+	font-size: 18px;
+	border: none;
+	border-radius: 2px;
+	font-weight: 700;
+	@include webkit-font-rendering;
+	&:hover, &:active {
+		color: $brand-white;
+		background: $color-button-hover;
+	}
+	&.small {
+		font-size: 14px;
+		height: 38px;
+	}
+	&.full-width {
+		width: 100%;
+	}
+}

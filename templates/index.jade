@@ -1,0 +1,62 @@
+- get_header();
+
+section#featured_articles.featured-articles
+	.content-container.clearfix
+		:php
+			query_posts( array( 'tag' => 'featured', 'posts_per_page' => 3));
+			if ( have_posts() ) while ( have_posts() ) : the_post();
+			get_template_part( 'featured', get_post_format() );
+			endwhile;
+			wp_reset_query();
+
+section#articles
+	.content-container
+		.container.clearfix
+			// list of new articles
+			#ajax-load-content
+				.articles-list
+					h1.title-latest
+						strong Featured Articles
+
+					:php
+						$exclude_ID1 = get_category_id('news');
+						$exclude_tag1 = get_tag_id('featured');
+						query_posts( array(
+							'posts_per_page' => 5,
+							'tag__not_in' => $exclude_tag1,
+							'category__not_in' => $exclude_ID1,
+							'paged' => get_query_var( 'paged' ),
+							));
+
+						if ( have_posts() ) while ( have_posts() ) : the_post();
+
+							get_template_part( 'article-list-items' );
+
+						endwhile;
+
+					.page-nav
+						- previous_posts_link('previous');
+						.next
+							- next_posts_link('next', $wp_query->max_num_pages);
+
+					- wp_reset_query();
+
+			// list of recent news
+			.news-list
+				h3.title-side-list
+					strong Rally News
+
+				:php
+					query_posts( array('category_name' => 'news', 'posts_per_page' => 6));
+					if ( have_posts() ) while ( have_posts() ) : the_post();
+
+						get_template_part( 'side-list-items', get_post_format() );
+
+					endwhile;
+					wp_reset_query();
+
+				a.read-more(href="/topics/news/") More News
+
+- get_template_part('promo-bottom');
+
+- get_footer();

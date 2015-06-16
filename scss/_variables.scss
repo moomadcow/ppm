@@ -1,0 +1,122 @@
+/* background colors */
+
+$color-html-bg: #ffffff;
+$color-body-bg: #ffffff;
+$color-footer: #f9f9f9;
+
+/* theme colors */
+$brand-green: #49c57e;
+$brand-dark-orange: #f26c32;
+$brand-teal: #36c8b5;
+$brand-red: #ef5b4b;
+$brand-orange: #fe9646;
+$brand-yellow: #ffc82b;
+$brand-blue: #00b2e2;
+$brand-black: #4d4d4d;
+$brand-dark-black: #333333;
+$brand-gray: #e5e5e5;
+$brand-light-gray: #f9f9f9;
+$brand-white: #fff;
+
+/* text color */
+$color-text: $brand-black;
+$color-text-h1: $brand-black;
+$color-text-h2: $brand-black;
+$color-text-error: $brand-red;
+
+
+/* link text color */
+$color-link: $brand-blue;
+$color-link-hover: $brand-orange;
+
+/* border colors */
+$color-border-gray: $brand-gray;
+
+/* button colors */
+$color-button: $brand-green;
+$color-button-hover: #75c594;
+
+/* fonts */
+$fonts: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$fonts-serif: "Times New Roman", Times, serif;
+
+
+/* mixins */
+
+/* responsive screen sizes */
+$phone-landscape: 414px;
+$tablet-portrait: 768px;
+$desktop: 980px;
+$desktop-large: 1200px;
+
+@mixin phone-portrait {
+	@media only screen and (max-width: #{$phone-landscape - 1px}) {
+		@content;
+	}
+}
+
+@mixin phone-landscape {
+	@media only screen and (min-width: #{$phone-landscape}) and (max-width: #{$tablet-portrait - 1px}) {
+		@content;
+	}
+}
+
+@mixin phone-all {
+	@media only screen and (min-width: 0) and (max-width: #{$tablet-portrait - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@media only screen and (min-width: #{$tablet-portrait}) and (max-width: #{$desktop - 1px}) {
+		@content;
+	}
+}
+
+@mixin mobile-all {
+	@media only screen and (min-width: 0) and (max-width: #{$desktop - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: #{$desktop}) {
+		@content;
+	}
+}
+
+@mixin desktop-large {
+	@media only screen and (min-width: #{$desktop-large}) {
+		@content;
+	}
+}
+
+@mixin retina {
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+			@content;
+		}
+}
+
+/* remove iOS touch tap color */
+@mixin ios-touch-color {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* webkit font rendering fixes */
+@mixin webkit-font-rendering {
+	-webkit-font-smoothing: antialiased;
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 1.25),
+	only screen and ( min-device-pixel-ratio: 1.25),
+	only screen and ( min-resolution: 200dpi),
+	only screen and ( min-resolution: 1.25dppx)
+	{
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+}

@@ -1,0 +1,25 @@
+/* signup panel */
+
+.signup {
+	background-image: url(images/bg-home.jpg);
+	background-position: center bottom;
+	height: 300px;
+	text-align: center;
+	@include phone-portrait {
+		height: 360px;
+	}
+	.container {
+		padding: 40px 0 40px 0;
+	}
+	h1, h2, p {
+		color: $brand-white;
+	}
+	h2 {
+		margin-bottom: 10px;
+		font-size: 30px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 18px;
+	}
+}

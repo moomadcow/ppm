@@ -1,0 +1,117 @@
+/* form styles 
+	imported from form.scss */
+
+/* form grouping and spacing */
+.form-fields {
+	padding: 0 0 8px 0;
+	clear: both;
+}
+
+/* label for normal text inputs */
+label {
+	font-size: 12px;
+	position: relative;
+	line-height: 1;
+	margin-bottom: 10px;
+	.columns & {
+		font-size: 14px;
+		width: 20%;
+		display: inline-block;
+	}
+}
+
+/* text inputs */
+input[type=text], input[type=password], input[type=email], textarea {
+	font-family: $fonts;
+	font-size: 16px;
+	border: 1px solid $brand-black;
+	display: block;
+	background: #fff;
+	padding: 4px;
+	height: 34px;
+	width: 100%;
+	outline: none;
+  transition: box-shadow 1s;
+  -webkit-appearance: none;
+  margin-top: 4px;
+  &:disabled {
+  	border: none;
+  	background: transparent;
+  	box-shadow: none;
+  }
+  .columns & {
+  	display: inline-block;
+  	width: 80%;
+  }
+}
+
+textarea {
+	height: 140px;
+	margin-bottom: 8px;
+}
+
+
+/* help icons */
+.form-fields, .form-group {
+	.help {
+		font-size: 14px;
+		display: inline-block;
+		padding-top: 4px;
+		.columns & {
+			padding: 0;
+		}
+		.fa {
+			font-size: 18px;
+			position: relative;
+			top: 2px;
+			.columns & {
+				font-size: 20px;
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+}
+
+
+/* submit button */
+input[type=submit] {
+	cursor: pointer;
+	&.button {
+		padding: 0;
+	}
+
+}
+
+/* styles for ninja forms plugin */
+
+.field-wrap {
+	margin-bottom: 8px;
+}
+
+.ninja-forms-field-error {
+	p {
+		font-size: 12px;
+		color: $brand-dark-orange;
+	}
+}
+
+.honeypot-wrap {
+	display: none;
+}
+
+
+/* styles for parsley */
+.parsley-errors-list {
+	list-style: none;
+	display: block;
+	margin-top: 4px;
+	font-size: 12px;
+}
+
+.parsley-required, .parsley-type {
+	color: $brand-red;
+}
+
+
+

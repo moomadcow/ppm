@@ -1,0 +1,185 @@
+/* common styles and basic content containers shared across all assets */
+
+/* enable border-box sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* basic content styles */
+html {
+	background: $color-html-bg;
+	height: 100%;
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background: $color-body-bg;
+	font-family: $fonts;
+	font-size: 16px;
+	line-height: 1;
+	color: $color-text;
+	width: 100%;
+	// height: 100%;
+	margin: 0;
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: $color-link;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+	.no-touch &:hover, &:active {
+		color: $color-link-hover;
+	}
+}
+
+p {
+	margin-bottom: 1em;
+	color: $color-text;
+	line-height: 1.5;
+	a {
+		text-decoration: underline;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	margin-bottom: 0.75em;
+	line-height: 1.5;
+	&.no-margin {
+		margin-bottom: 0;
+	}
+}
+
+h1 {
+	font-size: 35px;
+	color: $color-text-h1;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 28px;
+	color: $color-text-h2;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 24px;
+	color: $color-text-h2;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 22px;
+	color: $color-text-h2;
+	font-weight: 400;
+}
+
+b, strong {
+	font-weight: 600;
+}
+
+blockquote {
+	background: $brand-light-gray;
+	color: $brand-gray;
+	padding: 20px;
+	font-size: 1.4em;
+	line-height: 1.2;
+	overflow: auto;
+	border-radius: 6px;
+	margin-bottom: 1em;
+	p {
+		line-height: 1.2;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+pre {
+	font-family: Courier, sans-serif;
+	font-size: 12px;
+}
+
+sup {
+	font-size: 0.5em;
+	position: relative;
+	top: -0.8em;
+	margin-left: 0.2em;
+}
+
+/* operational styles */
+.clear {clear: both;}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+.border-gray {border: 1px solid $color-border-gray;}
+
+.round-corner-2 {border-radius: 2px;}
+.round-corner-4 {border-radius: 4px;}
+.round-corner-6 {border-radius: 6px;}
+.round-corner-8 {border-radius: 8px;}
+.round-corner-10 {border-radius: 10px;}
+.round-corner-12 {border-radius: 12px;}
+
+.padding-2 {padding: 2px;}
+.padding-4 {padding: 4px;}
+.padding-5 {padding: 5px;}
+.padding-6 {padding: 6px;}
+.padding-8 {padding: 8px;}
+.padding-10 {padding: 10px;}
+.padding-20 {padding: 20px;}
+
+.float-left {float: left;}
+.float-right {float: right;}
+
+.container {position: relative;}
+
+/* content container */
+.content-container {
+	width: 100%;
+	position: relative;
+	/* the container inside content-container will give us the
+	   flexibility to control responsive sizes */
+	> .container {
+		width: 980px;
+		margin: 0 auto;
+		padding: 20px 0;
+		@include tablet-portrait {
+			width: 768px;
+		}
+		@include phone-all {
+			width: 100%;
+		}
+		/*@include desktop-large {
+			width: 1200px;
+		}*/
+	}
+	&.fixed-width {
+		> .container {
+			@include phone-landscape {
+				width: 480px;
+			}
+			@include phone-portrait {
+				width: 320px;
+			}
+		}
+	}
+	&.no-padding {
+		> .container {
+			padding: 0;
+		}
+	}
+}
+

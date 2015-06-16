@@ -1,0 +1,108 @@
+/* layout styles for the Rally Health news page */
+
+
+/* main content div placement */
+.news-content {
+	padding-bottom: 80px;
+	.container {
+		padding: 10px 0 10px 0;
+		@include phone-all {
+			padding: 10px;
+		}
+	}
+}
+
+/* article blocks */
+.news-content {
+	article {
+		display: block;
+		position: relative;
+		float: left;
+		width: 300px;
+		height: 380px;
+		margin: 40px 9px 0 9px;
+		@include tablet-portrait {
+			width: 240px;
+			height: 380px;
+			margin: 40px 8px 0 8px;
+		}
+		@include phone-landscape {
+			width: 48%;
+			height: 320px;
+			margin: 10px 1% 0 1%;
+		}
+		@include phone-portrait {
+			width: 100%;
+			height: 360px;
+			margin: 10px 0 0 0;
+		}
+		.post-thumbnail {
+			display: block;
+			background: transparent no-repeat;
+			background-position: center center;
+			background-size: 100% 100%;
+			background-size: cover;
+			margin-bottom: 20px;
+			width: 100%;
+			height: 215px;
+			border: 1px solid #ccc;
+			transition: border 500ms;
+			.no-touch &:hover, &:active {
+				border-color: $brand-orange;
+			}
+			@include phone-all {
+				background-size: 100% auto;
+			}
+			@include phone-landscape {
+				height: 180px;
+				margin-bottom: 10px;
+			}
+			@include phone-portrait {
+				margin-bottom: 6px;
+			}
+		}
+		h1 {
+			font-size: 16px;
+			margin-bottom: 2px;
+			color: #333;
+			a {
+				color: $brand-black;
+				transition: color 400ms;
+				.no-touch &:hover, &:active {
+					color: $brand-orange;
+				}
+			}
+		}
+		time {
+			font-size: 12px;
+		}
+		.excerpt {
+			transition: all 300ms;
+			display: block;
+			width: 100%;
+			padding: 10px 0 10px 0;
+			font-size: 13px;
+			line-height: 1.5em;
+			color: #747474;
+			p {
+				font-size: 13px;
+				line-height: 1.5em;
+				color: #747474;
+			}
+
+		}
+	}
+}
+
+
+/* infinite scroll clearfix */
+
+.clear {clear: both;}
+.infinite-wrap:before, .infinite-wrap:after {
+	content: " ";
+	display: table;
+}
+.infinite-wrap:after {
+	clear: both;
+}
+
