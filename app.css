@@ -3162,9 +3162,9 @@ sup {
 }
 /* line 155, scss/_common.scss */
 .content-container > .container {
-  width: 980px;
+  width: 960px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px;
   /*@include desktop-large {
   	width: 1200px;
   }*/
@@ -3748,4 +3748,79 @@ input[type=submit].button {
     background-image: url(images/bg-header@2x.png);
     background-size: 768px 48px;
   }
+}
+/* line 20, scss/_header.scss */
+.site-header .content-container > .container {
+  padding: 0 10px 0 10px;
+  width: 100%;
+}
+
+/* line 27, scss/_header.scss */
+.logo-ppm {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 380px;
+  padding-top: 9px;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 41, scss/_header.scss */
+.logo-ppm a {
+  display: block;
+  margin: 0 auto;
+  width: 247px;
+  height: 29px;
+  background: transparent url(images/logo-ppm.png) no-repeat 0 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 41, scss/_header.scss */
+  .logo-ppm a {
+    background-image: url(images/logo-ppm@2x.png);
+    background-size: 247px 29px;
+  }
+}
+
+/* line 54, scss/_header.scss */
+.nav-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #4b0735;
+  height: 49px;
+  display: inline-block;
+  padding: 12px 20px 0 20px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #4b0735;
+}
+/* line 64, scss/_header.scss */
+.nav-switch .fa {
+  font-size: 24px;
+}
+/* line 67, scss/_header.scss */
+.nav-switch:hover {
+  background: #4b0735;
+  color: #fff;
+}
+/* line 70, scss/_header.scss */
+.nav-switch:hover .fa {
+  color: #fff;
+}
+
+/* home */
+/* line 3, scss/_home.scss */
+body {
+  padding-top: 60px;
 }
