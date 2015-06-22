@@ -44,17 +44,6 @@ endwhile;
           </div><?php wp_reset_query(); ?>
         </div>
       </div>
-      <!-- list of recent news-->
-      <div class="news-list">
-        <h3 class="title-side-list"><strong>Rally News</strong></h3><?php query_posts( array('category_name' => 'news', 'posts_per_page' => 6));
-if ( have_posts() ) while ( have_posts() ) : the_post();
-
-	get_template_part( 'side-list-items', get_post_format() );
-
-endwhile;
-wp_reset_query();
- ?><a href="/topics/news/" class="read-more">More News</a>
-      </div>
     </div>
   </div>
 </section><?php get_footer(); ?>
