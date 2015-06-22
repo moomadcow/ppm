@@ -6,9 +6,8 @@
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 320, 300, true ); // Normal post thumbnails
-add_image_size('news-single-post-image', 640, 600, true); // News single psot image
-add_image_size('news-tile-thumbnail', 600, 430, true); // News page tile images
-add_image_size('single-post-image', 1024, 512, array('center','top')); // large post thumbnails
+add_image_size('article-list-image', 600, 600, array('center','center')); // article list image
+add_image_size('single-post-image', 1280, 720, array('center','center')); // large post thumbnails
 
 
 /* =Clean up the WordPress head
