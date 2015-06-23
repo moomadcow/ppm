@@ -9,7 +9,9 @@ article(id!="post-<?php the_ID(); ?>" class!="content-block <?php echo $postClas
 		.heading
 			h2(title!="<?php the_title(); ?>")
 				- the_title();
-			.excerpt
-				- the_excerpt();
+			//.excerpt
+			//	- the_excerpt();
 			//.post-date
 			//	- the_time('F j, Y');
+	.categories.clearfix
+		- the_category();
