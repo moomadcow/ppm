@@ -4,7 +4,8 @@ article(id!="post-<?php the_ID(); ?>" class!="<?php echo $postClass; ?>")
 	a(href!="<?php the_permalink(); ?>")
 		h2(title!="<?php the_title(); ?>")
 			- the_title();
-		.desc
+		.post-date
+			- the_time('F j, Y');
 			:php
 				if ( get_post_meta($post->ID, 'by_line', true) ) {
 					echo get_post_meta($post->ID, "by_line", $single = true);
@@ -17,6 +18,3 @@ article(id!="post-<?php the_ID(); ?>" class!="<?php echo $postClass; ?>")
 			- the_time('j');
 			| , 
 			- the_time('Y');
-			- if ( get_post_meta($post->ID, 'article_source', true) ) {
-			|  | 
-			- echo get_post_meta($post->ID, "article_source", $single = true);}

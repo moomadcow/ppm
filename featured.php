@@ -7,4 +7,8 @@ $postClass = join( ' ', get_post_class() );
     <div class="heading">
       <h2 title="<?php the_title(); ?>"><?php the_title(); ?>
       </h2>
+      <div class="excerpt"><?php the_excerpt(); ?>
+      </div>
+      <!--.post-date-->
+      <!--	- the_time('F j, Y');-->
     </div></a></article>

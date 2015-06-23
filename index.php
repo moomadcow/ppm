@@ -15,8 +15,7 @@ wp_reset_query();
     <div class="container clearfix">
       <!-- list of new articles-->
       <div id="ajax-load-content">
-        <div class="articles-list">
-          <h1 class="title-latest"><strong>Featured Articles</strong></h1><?php $args = array(
+        <div class="articles-list"><?php $args = array(
 	'posts_per_page' => 4
 	);
 $ids = array();
