@@ -10,12 +10,15 @@ wp_reset_query();
  ?>
   </div>
 </section>
-<section id="articles">
+<section id="articles_list">
   <div class="content-container">
     <div class="container clearfix">
       <!-- list of new articles-->
       <div id="ajax-load-content">
-        <div class="articles-list"><?php $args = array(
+        <div class="articles-list">
+          <div class="section-header">
+            <h1>Latest Articles</h1>
+          </div><?php $args = array(
 	'posts_per_page' => 4
 	);
 $ids = array();

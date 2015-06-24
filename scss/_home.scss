@@ -5,6 +5,61 @@ body {
 }
 
 .articles-list {
-	width: 100%;
-	
+	width: 740px;
+	padding: 20px 10px 20px 10px;
+	margin: 0 auto;
+	.section-header {
+		position: relative;
+		border-bottom: 1px solid $color-border-gray;
+		height: 40px;
+		margin-bottom: 4px;
+		h1 {
+			position: absolute;
+			left: 0;
+			bottom: -2px;
+			background: $brand-white;
+			margin: 0;
+			padding: 0 4px 0 0;
+			line-height: 1;
+		}
+	}
+	article {
+		position: relative;
+		width: 100%;
+		min-height: 170px;
+		padding: 20px 0;
+		border-bottom: 1px solid $color-border-gray;
+		a {
+			h2 {
+				transition: all 200ms;
+			}
+		}
+		.thumbnail {
+			float: left;
+			position: relative;
+			width: 150px;
+			height: 150px;
+			margin-right: 20px;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center center;
+			.overlay {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 200ms;
+			}
+			&:hover {
+				.overlay {
+					background: rgba(75,7,53,0.4);
+				}
+			}
+		}
+		.post-info {
+			float: left;
+			width: 550px;
+		}
+	}
 }

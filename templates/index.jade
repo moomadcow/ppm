@@ -11,12 +11,14 @@ section.featured-articles#featured_articles
 			endwhile;
 			wp_reset_query();
 
-section#articles
+section#articles_list
 	.content-container
 		.container.clearfix
 			// list of new articles
 			#ajax-load-content
 				.articles-list
+					.section-header
+						h1 Latest Articles
 
 					:php
 						$args = array(

@@ -35,8 +35,14 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 	outline: none;
-	.no-touch &:hover, &:active {
+	&:hover, &:active {
 		color: $color-link-hover;
+	}
+	h1, h2, h3, h4, h5 {
+		color: $brand-purple;
+		&:hover, &:active {
+			color: $brand-teal;
+		}
 	}
 }
 

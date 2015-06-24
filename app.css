@@ -2958,65 +2958,73 @@ a {
   outline: none;
 }
 /* line 38, scss/_common.scss */
-.no-touch a:hover, a:active {
+a:hover, a:active {
   color: #4b0735;
 }
-
+/* line 41, scss/_common.scss */
+a h1, a h2, a h3, a h4, a h5 {
+  color: #4b0735;
+}
 /* line 43, scss/_common.scss */
+a h1:hover, a h1:active, a h2:hover, a h2:active, a h3:hover, a h3:active, a h4:hover, a h4:active, a h5:hover, a h5:active {
+  color: #1B6E82;
+}
+
+/* line 49, scss/_common.scss */
 p {
   margin-bottom: 1em;
   color: #2A2A2A;
   line-height: 1.5;
 }
-/* line 47, scss/_common.scss */
+/* line 53, scss/_common.scss */
 p a {
   text-decoration: underline;
 }
 
-/* line 52, scss/_common.scss */
+/* line 58, scss/_common.scss */
 h1, h2, h3, h4, h5 {
   margin-bottom: 0.25em;
   line-height: 1.3;
 }
-/* line 55, scss/_common.scss */
+/* line 61, scss/_common.scss */
 h1.no-margin, h2.no-margin, h3.no-margin, h4.no-margin, h5.no-margin {
   margin-bottom: 0;
 }
 
-/* line 60, scss/_common.scss */
+/* line 66, scss/_common.scss */
 h1 {
   font-size: 35px;
   color: #2A2A2A;
   font-weight: 400;
 }
 
-/* line 66, scss/_common.scss */
+/* line 72, scss/_common.scss */
 h2 {
   font-size: 28px;
   color: #2A2A2A;
   font-weight: 400;
 }
 
-/* line 72, scss/_common.scss */
+/* line 78, scss/_common.scss */
 h3 {
   font-size: 24px;
   color: #2A2A2A;
   font-weight: 400;
 }
 
-/* line 78, scss/_common.scss */
+/* line 84, scss/_common.scss */
 h4 {
   font-size: 22px;
   color: #2A2A2A;
   font-weight: 400;
 }
 
-/* line 84, scss/_common.scss */
+/* line 90, scss/_common.scss */
 b, strong {
   font-weight: 600;
 }
 
-/* line 88, scss/_common.scss */
+/* line 94, scss/_common.scss */
 blockquote {
   background: #f9f9f9;
   color: #e5e5e5;
@@ -3027,22 +3035,22 @@ blockquote {
   border-radius: 6px;
   margin-bottom: 1em;
 }
-/* line 97, scss/_common.scss */
+/* line 103, scss/_common.scss */
 blockquote p {
   line-height: 1.2;
 }
-/* line 99, scss/_common.scss */
+/* line 105, scss/_common.scss */
 blockquote p:last-child {
   margin-bottom: 0;
 }
 
-/* line 105, scss/_common.scss */
+/* line 111, scss/_common.scss */
 pre {
   font-family: Courier, sans-serif;
   font-size: 12px;
 }
 
-/* line 110, scss/_common.scss */
+/* line 116, scss/_common.scss */
 sup {
   font-size: 0.5em;
   position: relative;
@@ -3051,116 +3059,116 @@ sup {
 }
 
 /* operational styles */
-/* line 118, scss/_common.scss */
+/* line 124, scss/_common.scss */
 .clear {
   clear: both;
 }
 
-/* line 119, scss/_common.scss */
+/* line 125, scss/_common.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 123, scss/_common.scss */
+/* line 129, scss/_common.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 127, scss/_common.scss */
+/* line 133, scss/_common.scss */
 .border-gray {
   border: 1px solid #e5e5e5;
 }
 
-/* line 129, scss/_common.scss */
+/* line 135, scss/_common.scss */
 .round-corner-2 {
   border-radius: 2px;
 }
 
-/* line 130, scss/_common.scss */
+/* line 136, scss/_common.scss */
 .round-corner-4 {
   border-radius: 4px;
 }
 
-/* line 131, scss/_common.scss */
+/* line 137, scss/_common.scss */
 .round-corner-6 {
   border-radius: 6px;
 }
 
-/* line 132, scss/_common.scss */
+/* line 138, scss/_common.scss */
 .round-corner-8 {
   border-radius: 8px;
 }
 
-/* line 133, scss/_common.scss */
+/* line 139, scss/_common.scss */
 .round-corner-10 {
   border-radius: 10px;
 }
 
-/* line 134, scss/_common.scss */
+/* line 140, scss/_common.scss */
 .round-corner-12 {
   border-radius: 12px;
 }
 
-/* line 136, scss/_common.scss */
+/* line 142, scss/_common.scss */
 .padding-2 {
   padding: 2px;
 }
 
-/* line 137, scss/_common.scss */
+/* line 143, scss/_common.scss */
 .padding-4 {
   padding: 4px;
 }
 
-/* line 138, scss/_common.scss */
+/* line 144, scss/_common.scss */
 .padding-5 {
   padding: 5px;
 }
 
-/* line 139, scss/_common.scss */
+/* line 145, scss/_common.scss */
 .padding-6 {
   padding: 6px;
 }
 
-/* line 140, scss/_common.scss */
+/* line 146, scss/_common.scss */
 .padding-8 {
   padding: 8px;
 }
 
-/* line 141, scss/_common.scss */
+/* line 147, scss/_common.scss */
 .padding-10 {
   padding: 10px;
 }
 
-/* line 142, scss/_common.scss */
+/* line 148, scss/_common.scss */
 .padding-20 {
   padding: 20px;
 }
 
-/* line 144, scss/_common.scss */
+/* line 150, scss/_common.scss */
 .float-left {
   float: left;
 }
 
-/* line 145, scss/_common.scss */
+/* line 151, scss/_common.scss */
 .float-right {
   float: right;
 }
 
-/* line 147, scss/_common.scss */
+/* line 153, scss/_common.scss */
 .container {
   position: relative;
 }
 
 /* content container */
-/* line 150, scss/_common.scss */
+/* line 156, scss/_common.scss */
 .content-container {
   width: 100%;
   position: relative;
   /* the container inside content-container will give us the
      flexibility to control responsive sizes */
 }
-/* line 155, scss/_common.scss */
+/* line 161, scss/_common.scss */
 .content-container > .container {
   width: 960px;
   margin: 0 auto;
@@ -3170,30 +3178,30 @@ sup {
   }*/
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-  /* line 155, scss/_common.scss */
+  /* line 161, scss/_common.scss */
   .content-container > .container {
     width: 768px;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 767px) {
-  /* line 155, scss/_common.scss */
+  /* line 161, scss/_common.scss */
   .content-container > .container {
     width: 100%;
   }
 }
 @media only screen and (min-width: 414px) and (max-width: 767px) {
-  /* line 170, scss/_common.scss */
+  /* line 176, scss/_common.scss */
   .content-container.fixed-width > .container {
     width: 480px;
   }
 }
 @media only screen and (max-width: 413px) {
-  /* line 170, scss/_common.scss */
+  /* line 176, scss/_common.scss */
   .content-container.fixed-width > .container {
     width: 320px;
   }
 }
-/* line 180, scss/_common.scss */
+/* line 186, scss/_common.scss */
 .content-container.no-padding > .container {
   padding: 0;
 }
@@ -3827,7 +3835,67 @@ body {
 
 /* line 7, scss/_home.scss */
 .articles-list {
+  width: 740px;
+  padding: 20px 10px 20px 10px;
+  margin: 0 auto;
+}
+/* line 11, scss/_home.scss */
+.articles-list .section-header {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  height: 40px;
+  margin-bottom: 4px;
+}
+/* line 16, scss/_home.scss */
+.articles-list .section-header h1 {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background: #fff;
+  margin: 0;
+  padding: 0 4px 0 0;
+  line-height: 1;
+}
+/* line 26, scss/_home.scss */
+.articles-list article {
+  position: relative;
   width: 100%;
+  min-height: 170px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 33, scss/_home.scss */
+.articles-list article a h2 {
+  transition: all 200ms;
+}
+/* line 37, scss/_home.scss */
+.articles-list article .thumbnail {
+  float: left;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+/* line 46, scss/_home.scss */
+.articles-list article .thumbnail .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 200ms;
+}
+/* line 55, scss/_home.scss */
+.articles-list article .thumbnail:hover .overlay {
+  background: rgba(75, 7, 53, 0.4);
+}
+/* line 60, scss/_home.scss */
+.articles-list article .post-info {
+  float: left;
+  width: 550px;
 }
 
 /* featured articles */
