@@ -3827,6 +3827,20 @@ input[type=submit].button {
   color: #fff;
 }
 
+/* footer */
+/* line 3, scss/_footer.scss */
+footer {
+  background: #f9f9f9;
+}
+/* line 5, scss/_footer.scss */
+footer .copyright {
+  color: #2A2A2A;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
 /* home */
 /* line 3, scss/_home.scss */
 body {
