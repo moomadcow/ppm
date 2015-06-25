@@ -3861,7 +3861,7 @@ body {
   margin-bottom: 4px;
 }
 /* line 16, scss/_home.scss */
-.articles-list .section-header h1 {
+.articles-list .section-header h1, .articles-list .section-header h4 {
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -3870,7 +3870,11 @@ body {
   padding: 0 4px 0 0;
   line-height: 1;
 }
-/* line 26, scss/_home.scss */
+/* line 25, scss/_home.scss */
+.articles-list .section-header h4 {
+  font-size: 16px;
+}
+/* line 29, scss/_home.scss */
 .articles-list article {
   position: relative;
   width: 100%;
@@ -3878,11 +3882,11 @@ body {
   padding: 20px 0;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 33, scss/_home.scss */
+/* line 36, scss/_home.scss */
 .articles-list article a h2 {
   transition: all 200ms;
 }
-/* line 37, scss/_home.scss */
+/* line 40, scss/_home.scss */
 .articles-list article .thumbnail {
   float: left;
   position: relative;
@@ -3893,7 +3897,7 @@ body {
   background-size: cover;
   background-position: center center;
 }
-/* line 46, scss/_home.scss */
+/* line 49, scss/_home.scss */
 .articles-list article .thumbnail .overlay {
   width: 100%;
   height: 100%;
@@ -3902,11 +3906,11 @@ body {
   left: 0;
   transition: all 200ms;
 }
-/* line 55, scss/_home.scss */
+/* line 58, scss/_home.scss */
 .articles-list article .thumbnail:hover .overlay {
   background: rgba(75, 7, 53, 0.4);
 }
-/* line 60, scss/_home.scss */
+/* line 63, scss/_home.scss */
 .articles-list article .post-info {
   float: left;
   width: 550px;
@@ -4077,4 +4081,71 @@ body {
 /* line 133, scss/_featured.scss */
 .featured-articles article .categories a:hover {
   background: #4b0735;
+}
+
+/* single posts */
+/* line 5, scss/_single.scss */
+.single-post-content .heading > .container {
+  padding: 20px 10px 20px 10px;
+}
+/* line 8, scss/_single.scss */
+.single-post-content .heading h1 {
+  font-size: 40px;
+  margin-bottom: 0.2em;
+  color: #4b0735;
+}
+/* line 15, scss/_single.scss */
+.single-post-content .featured-image img {
+  width: 100%;
+  height: auto;
+}
+/* line 21, scss/_single.scss */
+.single-post-content .article-body > .container {
+  padding: 20px 0 30px 0;
+}
+/* line 24, scss/_single.scss */
+.single-post-content .article-body .side-bar {
+  float: left;
+  width: 220px;
+  padding: 0 10px 20px 10px;
+  margin-right: 60px;
+  line-height: 1.5;
+}
+/* line 30, scss/_single.scss */
+.single-post-content .article-body .side-bar > div {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 33, scss/_single.scss */
+.single-post-content .article-body .side-bar > div:first-child {
+  padding-top: 6px;
+}
+/* line 36, scss/_single.scss */
+.single-post-content .article-body .side-bar > div:last-child {
+  border-bottom: none;
+}
+/* line 39, scss/_single.scss */
+.single-post-content .article-body .side-bar > div h4 {
+  font-size: 12px;
+  color: #696969;
+  font-weight: 600;
+}
+/* line 46, scss/_single.scss */
+.single-post-content .article-body .side-bar .categories ul {
+  list-style: none;
+}
+/* line 51, scss/_single.scss */
+.single-post-content .article-body .main {
+  float: left;
+  width: 640px;
+  font-size: 18px;
+}
+/* line 55, scss/_single.scss */
+.single-post-content .article-body .main p {
+  font-size: 18px;
+}
+
+/* line 64, scss/_single.scss */
+.article-footer .articles-list .section-header {
+  height: 20px;
 }
