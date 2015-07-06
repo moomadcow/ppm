@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section id="featured_articles" class="featured-articles">
-  <div class="content-container clearfix"><?php query_posts( array('posts_per_page' => 4));
+  <div class="content-container clearfix"><?php query_posts( array('posts_per_page' => 5));
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
 	get_template_part( 'featured', get_post_format() );
@@ -19,7 +19,7 @@ wp_reset_query();
           <div class="section-header">
             <h1>Latest Articles</h1>
           </div><?php $args = array(
-	'posts_per_page' => 4
+	'posts_per_page' => 5
 	);
 $ids = array();
 $products = new WP_Query($args);
